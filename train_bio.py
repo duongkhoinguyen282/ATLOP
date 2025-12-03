@@ -5,7 +5,9 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 from transformers import AutoConfig, AutoModel, AutoTokenizer
-from transformers.optimization import AdamW, get_linear_schedule_with_warmup
+# from transformers.optimization import AdamW, get_linear_schedule_with_warmup
+from torch.optim import AdamW
+from transformers import get_linear_schedule_with_warmup
 from model import DocREModel
 from utils import set_seed, collate_fn
 from prepro import read_cdr, read_gda
